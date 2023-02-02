@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Font link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Adding React CDN -->
+    <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+
+    <!--Link CSS -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!--[1.Create script in JavaScript] -->
+
+    <!-- 
+        <div id="root"></div>
+
+    <script type="text/javascript">
+      const rootElement = document.getElementById("root");
+      const element = document.createElement("h1");
+      element.textContent = "Hello World!";
+      element.classList.add("greeting");
+      rootElement.appendChild(element);
+    </script> 
+    
+-->
+
+    <!--[2.Create script in ReactJS] -->
+
+    <!-- type="module" represent to developer use ReactJS -->
+
+    <!--         
+        <div id="root"></div>    
+
+        <script type="module">
+            const elementType = "h1";
+            const elementProps = {className: "greeting", children: "Hello New World!"};
+
+            const element = React.createElement(elementType, elementProps);
+
+            ReactDOM.render(element, document.getElementById("root"));
+
+        </script>
+ -->
+
+    <!--[3.Create script in ReactJS with use of JSX and Babel] -->
+
+    <!-- type="text/babel" represent use JSX compile with Babel in JS -->
+
+    <!-- <h1> use JSX in ReactJS -->
+
+    <!--    
+        <div id="root"></div>    
+
+        <script type="text/babel">
+        const rootElement = document.getElementById("root");
+        const element = <h1 className = "greeting">Hello Future World </h1>
+        
+        ReactDOM.render(element, rootElement);
+        
+        </script>
+ -->
+
+    <!--[4.Create script in ReactJS with use of JSX and Babel with embedding   variable] -->
+
+    <!-- [ using {} ] it means embedding Variable in JSX -->
+
+    <!--         
+        <div id="root"></div>    
+
+        <script type="text/babel">
+        const fullName = user => user.firstName + "  " + user.lastName;
+
+        const user = { firstName: "Rocky", lastName: "Ranjan" };
+
+        const className = "greeting";
+
+        const rootElement = document.getElementById("root");
+        const element = <h1 className = {className} >Hello Future {fullName(user)} </h1>
+        
+        ReactDOM.render(element, rootElement);
+        
+        </script>
+ -->
+
+    <!-- Nesting JSX return in one element in Render -->
+    <!-- 
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+      const fullName = "Rocky Ranjan";
+
+      const element = (
+        <div>
+          <h1 className="greeting"> Hello {fullName} </h1>
+          <p>
+            {" "}
+            <b> Nice To See You Again </b>{" "}
+          </p>
+        </div>
+      );
+
+      ReactDOM.render(element, rootElement);
+    </script> 
+-->
+
+    <!--[5.Create script in ReactJS with including external js file] -->
+
+    <div id="root"></div>
+
+    <script type="text/babel" src="index.js"></script>
+  </body>
+</html>
